@@ -7,41 +7,41 @@
  * @version    $Id$
  */
 
-/** ¿ªÆôhttps */
+/** å¼€å¯https */
 define('__TYPECHO_SECURE__',true);
 
-/** ¶¨Òå¸ùÄ¿Â¼ */
+/** å®šä¹‰æ ¹ç›®å½• */
 define('__TYPECHO_ROOT_DIR__', dirname(__FILE__));
 
-/** ¶¨Òå²å¼þÄ¿Â¼(Ïà¶ÔÂ·¾¶) */
+/** å®šä¹‰æ’ä»¶ç›®å½•(ç›¸å¯¹è·¯å¾„) */
 define('__TYPECHO_PLUGIN_DIR__', '/usr/plugins');
 
-/** ¶¨ÒåÄ£°åÄ¿Â¼(Ïà¶ÔÂ·¾¶) */
+/** å®šä¹‰æ¨¡æ¿ç›®å½•(ç›¸å¯¹è·¯å¾„) */
 define('__TYPECHO_THEME_DIR__', '/usr/themes');
 
-/** ºóÌ¨Â·¾¶(Ïà¶ÔÂ·¾¶) */
+/** åŽå°è·¯å¾„(ç›¸å¯¹è·¯å¾„) */
 define('__TYPECHO_ADMIN_DIR__', '/admin/');
 
-/** ÉèÖÃ°üº¬Â·¾¶ */
+/** è®¾ç½®åŒ…å«è·¯å¾„ */
 @set_include_path(get_include_path() . PATH_SEPARATOR .
 __TYPECHO_ROOT_DIR__ . '/var' . PATH_SEPARATOR .
 __TYPECHO_ROOT_DIR__ . __TYPECHO_PLUGIN_DIR__);
 
-/** ÔØÈëAPIÖ§³Ö */
+/** è½½å…¥APIæ”¯æŒ */
 require_once 'Typecho/Common.php';
 
-/** ³ÌÐò³õÊ¼»¯ */
+/** ç¨‹åºåˆå§‹åŒ– */
 Typecho_Common::init();
 
-/** ¶¨ÒåÊý¾Ý¿â²ÎÊý */
+/** å®šä¹‰æ•°æ®åº“å‚æ•° */
 $db = new Typecho_Db('Pdo_Mysql', 'typecho_');
 $db->addServer(array (
-  'host' => 'mysql.sqlpub.com',
-  'user' => 'rikkaa',
-  'password' => '5fb34a514d64ad32',
+  'host' => 'containers-us-west-134.railway.app',
+  'user' => 'root',
+  'password' => '49jGjtUgvaHmP87ZAxQO',
   'charset' => 'utf8mb4',
-  'port' => '3306',
-  'database' => 'xychan49',
+  'port' => '6047',
+  'database' => 'railway',
   'engine' => 'MyISAM',
 ), Typecho_Db::READ | Typecho_Db::WRITE);
 Typecho_Db::set($db);
